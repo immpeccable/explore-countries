@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import ContentWrapper from '../ContentWrapper';
+import InputWrapper from '../InputWrapper';
+import CountrySection from '../CountrySection';
 import Header from '../Header'
 import './index.css'
 
 let MainWrapper = () =>{
 
-    const [mode, setMode] = useState("white");
+    const [mode, setMode] = useState("dark");
 
     function setModeFunction(curr){
         setMode(curr);
@@ -13,7 +14,8 @@ let MainWrapper = () =>{
 
     return <div className={`main-wrapper ${mode === "white" ? "main-wrapper-white" : "main-wrapper-dark"}`}>
         <Header mode = {mode} setMode = {setModeFunction}/>
-        <ContentWrapper mode = {mode}/>
+        <InputWrapper mode = {mode}/>
+        <CountrySection/>
     </div>
 }
 

@@ -1,0 +1,15 @@
+.country-section-wrapper{
+    padding: 0 5rem;
+    position: absolute;
+    top: 14rem;
+    display: grid;
+    row-gap: 8rem;
+    column-gap: 7rem;
+    grid-template-columns: repeat(5, 19.25rem);
+    grid-template-rows: repeat(5, 24rem);
+}
+.country-section-wrapper > div {
+    background-color: var(--header-color-dark);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
+    border-radius: 5px;
+}
