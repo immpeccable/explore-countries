@@ -14,9 +14,14 @@ let MainWrapper = () => {
 
   useEffect(() => {
     async function fetchCountries() {
-      let response = await fetch("https://restcountries.com/v3.1/all");
+        let fetchUrl = "https://restcountries.com/v3.1/all";
+        if(countryName!==""){
+            fetchUrl = "https://restcountries.com/v3.1/name/" + countryName;
+        }
+      let response = await fetch(fetchUrl);
+
       response = await response.json();
-      setCountryList(response);
+      setCountryList([...response]);
     }
     fetchCountries();
   }, [countryName]);
@@ -28,6 +33,9 @@ let MainWrapper = () => {
   function setModeFunction(curr) {
     setMode(curr);
   }
+
+
+  
   return (
     <div
       className={`main-wrapper ${
@@ -36,7 +44,7 @@ let MainWrapper = () => {
     >
       <Header mode={mode} setMode={setModeFunction} />
       <InputWrapper mode={mode} setCountryName = {setCountryFunction} />
-      <CountrySection mode={mode} />
+      <CountrySection countryList = {countryList} mode={mode} />
     </div>
   );
 };
