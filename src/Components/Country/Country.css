@@ -1,7 +1,6 @@
 .country-wrapper{
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     gap: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
     cursor: pointer;
@@ -20,15 +19,17 @@
 
 .country-flag{
     width: 19.2rem;
+    height: 12rem;
 }
 .country-name{
+    width: 15.2rem;
     display: flex;
-    padding-left: 2rem;
+    padding: 0 2rem;
     font-weight: bold;
     font-size: 1.2rem;
 }
 .country-info{
-    padding-left: 2rem;
+    padding: 0 2rem;
 }
 .light-text{
     font-weight:100;

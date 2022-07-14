@@ -6,5 +6,5 @@
     row-gap: 8rem;
     column-gap: 7rem;
     grid-template-columns: repeat(5, 19.25rem);
-    grid-template-rows: repeat(2, 24rem);
+    grid-template-rows: repeat(3, 24rem);
 }
