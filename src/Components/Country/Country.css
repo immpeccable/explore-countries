@@ -1,0 +1,39 @@
+.country-wrapper{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.country-wrapper-light{
+
+    color: black;
+    background-color: var(--bg-color-white);
+}
+.country-wrapper-dark{
+    color: white;
+    background-color: var(--header-color-dark);
+}
+
+.country-flag{
+    width: 19.2rem;
+}
+.country-name{
+    display: flex;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.country-info{
+    padding-left: 2rem;
+}
+.light-text{
+    font-weight:100;
+    margin-left: 3px;
+}
+.mid-text{
+    font-weight: 900;
+}

@@ -1,16 +1,17 @@
 import './CountrySection.css'
+import Country from '../Country'
 
-export default function CountrySection(){
+export default function CountrySection({mode}){
     return <div className='country-section-wrapper'>
-        <div>item1</div>
-        <div>item2</div>
-        <div>item1</div>
-        <div>item2</div>
-        <div>item1</div>
-        <div>item2</div>
-        <div>item1</div>
-        <div>item2</div>
-        <div>item1</div>
-        <div>item2</div>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
+        <Country mode = {mode}/>
     </div>
 }
