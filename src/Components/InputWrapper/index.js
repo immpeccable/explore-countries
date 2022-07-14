@@ -4,16 +4,7 @@ import DropdownRegion from "./DropdownRegion";
 import whiteModeSearch from "../images/search-interface-symbol.png";
 import darkModeSearch from "../images/search-interface-symbol (1).png";
 
-export default function InputWrapper({ mode }) {
-  const [countryName, setCountryName] = useState("");
-  const [counryList, setCountryList] = useState();
-
-  useEffect(() => {
-    async function fetchCountries() {
-      let response = fetch();
-    }
-    fetchCountries();
-  }, [countryName]);
+export default function InputWrapper({ mode, setCountryName }) {
 
   return (
     <div className="input-wrapper">
