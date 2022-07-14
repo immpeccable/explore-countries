@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
 import "./InputWrapper.css";
 import DropdownRegion from "./DropdownRegion";
 import whiteModeSearch from "../images/search-interface-symbol.png";
 import darkModeSearch from "../images/search-interface-symbol (1).png";
 
-export default function InputWrapper({ mode, setCountryName }) {
+export default function InputWrapper({ mode, setCountryName, setRenderArray }) {
 
   return (
     <div className="input-wrapper">
@@ -30,7 +29,7 @@ export default function InputWrapper({ mode, setCountryName }) {
           placeholder="Search for a country..."
         ></input>
       </div>
-      <DropdownRegion mode={mode} />
+      <DropdownRegion setRenderArray = {setRenderArray} mode={mode} />
     </div>
   );
 }

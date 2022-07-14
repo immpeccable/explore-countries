@@ -4,7 +4,7 @@ import "./Dropdown.css";
 import whiteIcon from "../../images/down-arrow (1).png";
 import blackIcon from "../../images/down-arrow.png";
 
-export default function DropdownRegion({ mode }) {
+export default function DropdownRegion({ mode, setRenderArray }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="root-dropdown-wrapper">
@@ -24,11 +24,12 @@ export default function DropdownRegion({ mode }) {
           mode === "white" ? "white" : "dark"
         }`}
       >
-        <div className="dropdown-item">Africa</div>
-        <div className="dropdown-item">America</div>
-        <div className="dropdown-item">Asia</div>
-        <div className="dropdown-item">Europe</div>
-        <div className="dropdown-item">Oceania</div>
+        <div onClick={(e) => { setRenderArray(e.target.textContent)}} className="dropdown-item">All</div>
+        <div onClick={(e) => { setRenderArray(e.target.textContent)}} className="dropdown-item">Africa</div>
+        <div onClick={(e) => { setRenderArray(e.target.textContent)}} className="dropdown-item">Americas</div>
+        <div onClick={(e) => { setRenderArray(e.target.textContent)}} className="dropdown-item">Asia</div>
+        <div onClick={(e) => { setRenderArray(e.target.textContent)}} className="dropdown-item">Europe</div>
+        <div onClick={(e) => { setRenderArray(e.target.textContent)}} className="dropdown-item">Oceania</div>
       </div>
     </div>
   );

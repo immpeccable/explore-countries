@@ -5,12 +5,11 @@ import Header from "../Header";
 import "./index.css";
 
 let MainWrapper = () => {
-  const [mode, setMode] = useState("dark");
 
+  const [mode, setMode] = useState("dark");
   const [countryName, setCountryName] = useState("");
   const [countryList, setCountryList] = useState();
-
-  
+  const [renderArray, setRenderArray] = useState([]);
 
   useEffect(() => {
     async function fetchCountries() {
@@ -22,6 +21,7 @@ let MainWrapper = () => {
 
       response = await response.json();
       setCountryList([...response]);
+      setRenderArray([...response])
     }
     fetchCountries();
   }, [countryName]);
@@ -33,8 +33,17 @@ let MainWrapper = () => {
   function setModeFunction(curr) {
     setMode(curr);
   }
-
-
+  function setRenderArrayFunction(filter){
+    if(countryList && filter === "All"){
+        setRenderArray([...countryList]);
+        return;
+    }
+    if(countryList){
+        setRenderArray(countryList.filter((el) => {
+            return el.region === filter;
+        }))
+    }
+  }
   
   return (
     <div
@@ -43,8 +52,8 @@ let MainWrapper = () => {
       }`}
     >
       <Header mode={mode} setMode={setModeFunction} />
-      <InputWrapper mode={mode} setCountryName = {setCountryFunction} />
-      <CountrySection countryList = {countryList} mode={mode} />
+      <InputWrapper setRenderArray = {setRenderArrayFunction} mode={mode} setCountryName = {setCountryFunction} />
+      <CountrySection mode={mode} renderArray = {renderArray} />
     </div>
   );
 };

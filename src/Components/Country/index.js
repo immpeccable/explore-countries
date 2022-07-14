@@ -1,5 +1,4 @@
 import "./Country.css";
-import TurkeyFlag from "../images/Screen Shot 2022-07-14 at 18.59.38.png";
 
 export default function Country({mode, countryInfo}) {
   return (

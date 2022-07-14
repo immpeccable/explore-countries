@@ -1,19 +1,17 @@
 import './CountrySection.css'
 import Country from '../Country'
-import { useState } from 'react';
 
-export default function CountrySection({mode, countryList}){
-
+export default function CountrySection({mode, renderArray}){
 
     function mapSlicedArray(){
 
         let slicedArray = [];
-        if(countryList && countryList.length > 0){
-            let max = countryList.length;
-            if(countryList.length > 15){
+        if(renderArray && renderArray.length > 0){
+            let max = renderArray.length;
+            if(renderArray.length > 15){
                 max = 15;
             }
-            slicedArray = countryList.slice(0, max);
+            slicedArray = renderArray.slice(0, max);
             console.log(slicedArray);
         }
 
