@@ -1,15 +1,23 @@
-import './index.css'
+import "./index.css";
+import NightMode from "../images/night-mode (1).png";
+import LightMode from "../images/sleep-mode.png";
 
-let Header = () => {
-
-    return <div className='header'>
-        <div className='header-left-side'>
-            Where in the world?
+let Header = ({ mode, setMode }) => {
+  return (
+    <div
+      className={`header ${mode === "white" ? "header-white" : "header-dark"}`}
+    >
+      <div className="header-left-side">Where in the world?</div>
+      <div onClick={() => {
+            setMode(mode === "white" ? "dark" : "white");
+          }} className="header-right-side">
+          <img className="switch-img" src= {mode === "white" ? LightMode : NightMode} alt = "error"/>
+        
+        <div className="header-right-descr">
+            {mode === "white" ? "Dark Mode" : "Light Mode"}
         </div>
-        <div className='header-right-side'>
-            Dark Mode
-        </div>
+      </div>
     </div>
-
-}
+  );
+};
 export default Header;
