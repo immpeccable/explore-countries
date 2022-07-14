@@ -1,0 +1,45 @@
+.content-wrapper{
+    width: 100vw;
+}
+
+.search-img{
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.input-search-wrapper{
+    padding: 1rem 2rem;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+.country-name{
+    width: 18rem;
+}
+.country-name-white{
+    color: black;
+}
+.country-name-dark{
+    color: white;
+}
+
+.input-search-wrapper-white{
+    background-color: white;
+    color: black;
+}
+.input-search-wrapper-dark{
+    background-color: var(--header-color-dark);
+    color: white;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+}

@@ -5,7 +5,27 @@
     align-items: center;
     padding: 1rem 5rem;
     width: calc(100vw - 10rem);
-    background-color: var(--header-color);
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.switch-img{
+    width: 1.2rem;
+    height: 1.2rem;
+    
+}
+.switch-mode{
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-white{
+    background-color: var(--header-color-white);
+}
+.header-dark{
+    background-color: var(--header-color-dark);
 }
 
 .header-left-side{
@@ -16,4 +36,10 @@
 .header-right-side{
     font-weight: lighter;
     font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
 }

@@ -7,21 +7,35 @@ body{
     color: white;
     font-size: 24px;
     font-weight: 500;
-    background-color: var(--bg-color);
 }
 *{
     font-family: Roboto Slab;
+    outline: none;
+    text-decoration: none;
+    background-color: inherit;
+    border: none;
 }
 
 :root{
-    --header-color: #2B3743;
-    --bg-color: #202D36;
+    --header-color-dark: #2B3743;
+    --bg-color-dark: #202D36;
+    --bg-color-white: #FAFAFA;
+    --header-color-white: white;
+    
+}
+.main-wrapper-white{
+    background-color: var(--bg-color-white);
+    color: black;
+}
+.main-wrapper-dark{
+    background-color: var(--bg-color-dark);
+    color: white;
 }
 
 .main-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
+    height: 100vh;
 }
