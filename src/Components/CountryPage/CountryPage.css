@@ -20,6 +20,7 @@
     flex-direction: row;
     gap: 1rem;
     align-items: center;
+    cursor: pointer;
 }
 .back-wrapper-white{
     color: black;
@@ -39,7 +40,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30rem;
+    gap: 10rem;
 }
 .country-page-img{
     width: 40rem;
@@ -79,4 +80,20 @@
     flex-direction: row;
     align-items: center;
     gap: 0.4rem
+}
+
+.border-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.border-countries{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    width: 50rem;
+    overflow-x: auto;
 }

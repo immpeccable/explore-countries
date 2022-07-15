@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import Header from "./Components/Header";
 import MainWrapper from "./Components/MainWrapper";
 import CountryPage from "./Components/CountryPage";
@@ -16,14 +16,12 @@ export default function AppRouter() {
       <Header mode={mode} setMode={setModeFunc} />
       <Routes>
         <Route
-          exact
-          path="/"
-          element={<MainWrapper mode={mode} setMode={setModeFunc} />}
+          path="country/:code"
+          element={<CountryPage mode={mode}></CountryPage>}
         ></Route>
         <Route
-          exact
-          path="/country/:code"
-          element={<CountryPage mode={mode}></CountryPage>}
+          exact path="/"
+          element={<MainWrapper mode={mode} setMode={setModeFunc} />}
         ></Route>
       </Routes>
     </div>

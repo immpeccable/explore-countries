@@ -12,7 +12,6 @@ export default function CountryPage({ mode }) {
     let isSubscribed = true;
 
     fetchCountry();
-
     async function fetchCountry() {
       let fetchUrl = "https://restcountries.com/v2/alpha/" + code;
       let response = await fetch(fetchUrl);
@@ -26,7 +25,19 @@ export default function CountryPage({ mode }) {
     return () => {
       isSubscribed = false;
     };
-  }, []);
+  }, [code]);
+
+
+
+  function renderBorderCountries(){
+    if(countryInfo && countryInfo.borders){
+      return countryInfo.borders.map((el) => {
+        return <Link to = {"/country/" + el} replace><button className={`back-wrapper ${
+          mode === "white" ? "back-wrapper-white" : "back-wrapper-dark"
+        }`}>{el}</button> </Link>
+      })
+    }
+  }
 
   return (
     <div className={`country-page-content-wrapper ${mode === "white" ? "country-page-content-wrapper-white": "country-page-content-wrapper-dark"}`}>
@@ -92,7 +103,14 @@ export default function CountryPage({ mode }) {
               </div>
             </div>
           </div>
-          <div></div>
+          <div className="border-wrapper">
+            <div className="key">
+              Border Countries:
+            </div>
+            <div className="border-countries">
+              {renderBorderCountries()}
+            </div>
+          </div>
         </div>
       </div>
     </div>
