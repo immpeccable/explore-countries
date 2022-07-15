@@ -1,0 +1,35 @@
+.country-page-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 5rem;
+    margin-top: 3rem;
+}
+.back-wrapper{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
+    padding: 0.7rem 2.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.back-wrapper-white{
+    color: black;
+    background-color: var(--header-color-white);
+}
+
+.back-wrapper-dark{
+    color: white;
+    background-color: var(--header-color-dark);
+}
+.back-img{
+    image-rendering: optimizeQuality;
+}
+
+.country-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+}

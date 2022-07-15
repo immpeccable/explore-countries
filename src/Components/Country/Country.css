@@ -5,6 +5,8 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
     cursor: pointer;
     border-radius: 5px;
+    width: 19.25rem;
+    height: 24rem;
 }
 
 .country-wrapper-light{

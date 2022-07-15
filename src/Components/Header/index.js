@@ -4,15 +4,10 @@ import LightMode from "../images/sleep-mode.png";
 
 let Header = ({ mode, setMode }) => {
 
-  function changeMode(){
-
-    setMode(mode === "white" ? "dark" : "white");
-    if(mode === "white"){
-      document.body.style.backgroundColor = "#202D36";
-    }else{
-      document.body.style.backgroundColor = "#FAFAFA";
-    }
-
+  if (mode === "white") {
+    document.body.style.backgroundColor = "#FAFAFA";
+  } else {
+    document.body.style.backgroundColor = "#202D36";
   }
 
   return (
@@ -21,7 +16,7 @@ let Header = ({ mode, setMode }) => {
     >
       <div className="header-left-side">Where in the world?</div>
       <div onClick={() => {
-            changeMode();
+            setMode(mode === "white" ? "dark" : "white");
           }} className="header-right-side">
           <img className="switch-img" src= {mode === "white" ? LightMode : NightMode} alt = "error"/>
         
