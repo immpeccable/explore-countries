@@ -6,7 +6,7 @@ import "./Router.css";
 import { useEffect, useState } from "react";
 
 export default function AppRouter() {
-  const [mode, setMode] = useState("white");
+  const [mode, setMode] = useState("dark");
 
   function setModeFunc(curr) {
     setMode(curr);

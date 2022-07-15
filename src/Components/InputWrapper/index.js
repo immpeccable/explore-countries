@@ -25,6 +25,7 @@ export default function InputWrapper({ mode, setCountryName, setRenderArray }) {
           }`}
           onChange={(e) => {
             setCountryName(e.target.value);
+            console.log(e.target.value);
           }}
           placeholder="Search for a country..."
         ></input>
