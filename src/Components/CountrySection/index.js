@@ -3,6 +3,7 @@ import Country from "../Country";
 import { Link } from "react-router-dom";
 
 export default function CountrySection({ mode, renderArray }) {
+  console.log(renderArray);
   function mapSlicedArray() {
     let slicedArray = [];
     if (renderArray && renderArray.length > 0) {

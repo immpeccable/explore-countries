@@ -3,26 +3,37 @@ import InputWrapper from "../InputWrapper";
 import CountrySection from "../CountrySection";
 import "./index.css";
 
+let inProcess = false;
+
 let MainWrapper = ({mode, setMode}) => {
 
   
   const [countryName, setCountryName] = useState("");
   const [countryList, setCountryList] = useState();
-  const [renderArray, setRenderArray] = useState([]);
+  const [renderArray, setRenderArray] = useState();
 
   useEffect(() => {
+    
+    let isSubscribed = true;
+
+    fetchCountries();
+
     async function fetchCountries() {
+      inProcess = true;
         let fetchUrl = "https://restcountries.com/v3.1/all";
         if(countryName!==""){
             fetchUrl = "https://restcountries.com/v3.1/name/" + countryName;
         }
       let response = await fetch(fetchUrl);
-
       response = await response.json();
-      setCountryList([...response]);
-      setRenderArray([...response])
+      if(isSubscribed){
+        setCountryList(response);
+        setRenderArray(response)
+      }
     }
-    fetchCountries();
+    return () => {
+      isSubscribed = false;
+    }
   }, [countryName]);
 
   function setCountryFunction(curr){
@@ -30,7 +41,7 @@ let MainWrapper = ({mode, setMode}) => {
   }
   function setRenderArrayFunction(filter){
     if(countryList && filter === "All"){
-        setRenderArray([...countryList]);
+        setRenderArray(countryList);
         return;
     }
     if(countryList){
