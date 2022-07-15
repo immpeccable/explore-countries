@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 import MainWrapper from "./Components/MainWrapper";
 import CountryPage from "./Components/CountryPage";
 import "./Router.css";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 export default function AppRouter() {
   const [mode, setMode] = useState("dark");
