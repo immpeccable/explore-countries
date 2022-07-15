@@ -24,9 +24,11 @@
 
 .header-white{
     background-color: var(--header-color-white);
+    color: black;
 }
 .header-dark{
     background-color: var(--header-color-dark);
+    color: white;
 }
 
 .header-left-side{

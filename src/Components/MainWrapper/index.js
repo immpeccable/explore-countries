@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import InputWrapper from "../InputWrapper";
 import CountrySection from "../CountrySection";
-import Header from "../Header";
 import "./index.css";
 
-let MainWrapper = () => {
+let MainWrapper = ({mode, setMode}) => {
 
-  const [mode, setMode] = useState("dark");
+  
   const [countryName, setCountryName] = useState("");
   const [countryList, setCountryList] = useState();
   const [renderArray, setRenderArray] = useState([]);
@@ -29,10 +28,6 @@ let MainWrapper = () => {
   function setCountryFunction(curr){
     setCountryName(curr);
   }
-
-  function setModeFunction(curr) {
-    setMode(curr);
-  }
   function setRenderArrayFunction(filter){
     if(countryList && filter === "All"){
         setRenderArray([...countryList]);
@@ -51,7 +46,6 @@ let MainWrapper = () => {
         mode === "white" ? "main-wrapper-white" : "main-wrapper-dark"
       }`}
     >
-      <Header mode={mode} setMode={setModeFunction} />
       <InputWrapper setRenderArray = {setRenderArrayFunction} mode={mode} setCountryName = {setCountryFunction} />
       <CountrySection mode={mode} renderArray = {renderArray} />
     </div>
