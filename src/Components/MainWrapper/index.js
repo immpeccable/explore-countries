@@ -3,8 +3,6 @@ import InputWrapper from "../InputWrapper";
 import CountrySection from "../CountrySection";
 import "./index.css";
 
-let inProcess = false;
-
 let MainWrapper = ({mode, setMode}) => {
 
   
@@ -19,7 +17,6 @@ let MainWrapper = ({mode, setMode}) => {
     fetchCountries();
 
     async function fetchCountries() {
-      inProcess = true;
         let fetchUrl = "https://restcountries.com/v3.1/all";
         if(countryName!==""){
             fetchUrl = "https://restcountries.com/v3.1/name/" + countryName;
