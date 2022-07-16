@@ -40,3 +40,21 @@
     padding: 0 5rem;
     width: calc(100vw - 10rem);
 }
+
+@media screen and (max-width: 600px) {
+    .input-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        padding: 0 1rem;
+        width: auto;
+    }
+    .input-search-wrapper{
+        width: auto;
+    }
+    .country-name{
+        width: auto;
+    }
+    
+}

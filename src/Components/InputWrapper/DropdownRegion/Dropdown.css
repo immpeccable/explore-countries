@@ -50,3 +50,12 @@
 .not-visible{
     display: none;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .root-dropdown-wrapper{
+        max-width: 15rem;
+    }
+
+}

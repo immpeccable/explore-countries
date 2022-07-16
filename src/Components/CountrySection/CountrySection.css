@@ -8,3 +8,15 @@
     grid-template-columns: repeat(5, 19.25rem);
     grid-template-rows: repeat(3, 24rem);
 }
+
+@media screen and (max-width: 600px) {
+    .country-section-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        position: inherit;
+        padding: 0 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
