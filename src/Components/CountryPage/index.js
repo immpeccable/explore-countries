@@ -32,7 +32,7 @@ export default function CountryPage({ mode }) {
   function renderBorderCountries(){
     if(countryInfo && countryInfo.borders){
       return countryInfo.borders.map((el) => {
-        return <Link to = {"/country/" + el} replace><button className={`back-wrapper ${
+        return <Link to = {"/country/" + el} replace><button className={`back-wrapper border-country-name ${
           mode === "white" ? "back-wrapper-white" : "back-wrapper-dark"
         }`}>{el}</button> </Link>
       })
@@ -41,7 +41,7 @@ export default function CountryPage({ mode }) {
 
   return (
     <div className={`country-page-content-wrapper ${mode === "white" ? "country-page-content-wrapper-white": "country-page-content-wrapper-dark"}`}>
-      <Link to={"/"}>
+      <Link className="root-back" to={"/"}>
         <button
           className={`back-wrapper ${
             mode === "white" ? "back-wrapper-white" : "back-wrapper-dark"

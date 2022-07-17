@@ -26,12 +26,12 @@
 .country-namee{
     width: 15.2rem;
     display: flex;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     font-weight: bold;
     font-size: 1.2rem;
 }
 .country-info{
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 .light-text{
     font-weight:100;
@@ -39,4 +39,13 @@
 }
 .mid-text{
     font-weight: 900;
+}
+
+@media screen and (max-width: 600px) {
+    .country-wrapper{
+        width: 90vw;
+    }
+    .country-flag{
+        width: 90vw;
+    }
 }
