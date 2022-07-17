@@ -5,7 +5,7 @@ body{
     color: white;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden;   
 }
 *{
     font-family: Roboto Slab;
@@ -24,7 +24,6 @@ body{
     --bg-color-dark: #202D36;
     --bg-color-white: #FAFAFA;
     --header-color-white: white;
-    
 }
 .main-wrapper-white{
     background-color: var(--bg-color-white);
